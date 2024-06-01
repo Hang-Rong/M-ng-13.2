@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra chuỗi</title>
+</head>
+<body>
+    <script>
+        function checkStringsEqual(str1, str2) {
+            // Kiểm tra xem hai chuỗi có giống nhau hay không
+            return str1 === str2;
+        }
+
+        // Nhập hai chuỗi từ người dùng
+        const string1 = prompt("Nhập chuỗi thứ nhất:");
+        const string2 = prompt("Nhập chuỗi thứ hai:");
+
+        // Kiểm tra và hiển thị kết quả
+        if (checkStringsEqual(string1, string2)) {
+            alert("Hai chuỗi đã nhập giống nhau.");
+        } else {
+            alert("Hai chuỗi đã nhập không giống nhau.");
+        }
+    </script>
+</body>
+</html>

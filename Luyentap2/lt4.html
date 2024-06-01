@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số từ trong chuỗi</title>
+</head>
+<body>
+    <script>
+        function countWords(str) {
+            // Xóa các dấu cách ở đầu và cuối chuỗi
+            str = str.trim();
+            
+            // Kiểm tra chuỗi rỗng
+            if (str === "") {
+                return 0;
+            }
+            
+            // Tách chuỗi thành mảng các từ
+            const words = str.split(/\s+/);
+            
+            // Đếm số phần tử trong mảng
+            return words.length;
+        }
+
+        const inputString = prompt("Nhập một chuỗi:");
+        const wordCount = countWords(inputString);
+        alert("Số từ trong chuỗi là: " + wordCount);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            [1, 2, 4],
+            [5, 6, 87],
+            [6, 21, 9]
+        ];
+
+        for (let i = 0; i < arr.length; i++) {
+            let max = arr[i][0];
+            for (let j = 0; j < arr[i].length; j++) { // Duyệt cột nằm trong hàng i
+                if(arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+            console.log("Max hàng " + i + " là : " + max);
+        }
+    </script>
+</body>
+</html>
