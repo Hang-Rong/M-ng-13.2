@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Từ điển </title>
+</head>
+
+<body>
+    <h2> Từ điển hạn hẹp </h2>
+    <label for="input"> Nhập từ muốn dịch </label>
+    <input type="text" id="input">
+    <button id="dich"> Dịch </button>
+    <h3 id="ketqua"></h3>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+            dich.onclick = function () {
+                let eng = ['dog', 'cat', 'fish', 'bird', 'elephant'];
+                let vie = ['con chó', 'con mèo', 'con cá', 'con chim', 'con voi'];
+                const input = document.getElementById('input').value;
+                const dich = document.getElementById('dich');
+                let tracuu = 0;
+                let ketqua = "";
+                for (let i = 0; i < eng.length; i++) {
+                    if (input === eng[i]) {
+                        tracuu = i;
+                        for (let j = 0; j < vie.length; j++) {
+                            if (tracuu == j) {
+                                ketqua = vie[j];
+                            }
+
+                        }
+
+                    }
+                    
+                }
+                document.getElementById('ketqua').innerHTML = "Từ "+ "'" + input + "'" + " có nghĩa là "+ "'"+ ketqua+"'";
+            }
+        })
+    </script>
+</body>
+
+</html>
